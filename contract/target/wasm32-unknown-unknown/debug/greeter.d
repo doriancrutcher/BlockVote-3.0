@@ -1,0 +1,1 @@
+/Users/doriankinoocrutcher/Documents/NEAR/Blockheads/VotingAppV3/contract/target/wasm32-unknown-unknown/debug/greeter.wasm: /Users/doriankinoocrutcher/Documents/NEAR/Blockheads/VotingAppV3/contract/src/lib.rs

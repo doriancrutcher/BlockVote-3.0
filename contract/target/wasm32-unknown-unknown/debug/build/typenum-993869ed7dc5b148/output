@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/doriankinoocrutcher/Documents/NEAR/Blockheads/votingapp3.0final/contract/target/wasm32-unknown-unknown/debug/build/typenum-993869ed7dc5b148/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/doriankinoocrutcher/Documents/NEAR/Blockheads/votingapp3.0final/contract/target/wasm32-unknown-unknown/debug/build/typenum-993869ed7dc5b148/out/op.rs
