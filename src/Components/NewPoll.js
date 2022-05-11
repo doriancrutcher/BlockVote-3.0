@@ -15,27 +15,15 @@ const NewPoll = (props) => {
   const sendToBlockChain = async () => {
     changeDisable(true);
 
-    await window.contract.add_url({
-      name: candidateName1.current.value,
-      url: candidateName1URL.current.value,
-    });
+    // logic needed to store image url for Candidate 1
 
-    await window.contract.add_url({
-      name: candidateName2.current.value,
-      url: candidateName2URL.current.value,
-    });
+    // logic needed to store image url for Candidate 2
 
-    await window.contract.add_candidate_pair({
-      prompt: promptRef.current.value,
-      name_1: candidateName1.current.value,
-      name_2: candidateName2.current.value,
-    });
+    // logic needed to add candidate pair
 
-    await window.contract.add_to_prompt_array({
-      prompt: promptRef.current.value,
-    });
+    // logic needed to add to prompt array
 
-    await window.contract.new_vote({ prompt: promptRef.current.value });
+    // logic needed to add a new vote count array
 
     alert("head back to home page");
   };

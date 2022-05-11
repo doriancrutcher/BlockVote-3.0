@@ -16,63 +16,15 @@ const PollingStation = (props) => {
   const [prompt, changePrompt] = useState("--");
 
   useEffect(() => {
-    const getInfo = async () => {
-      let x = "localStorage";
-      console.log("Who should be our leader?" === localStorage.prompt);
-      // vote count stuff
-      let voteCount = await window.contract.get_votes({
-        prompt: "Who should be our leader?",
-      });
-      changeVote1(voteCount[0]);
-      changeVote2(voteCount[1]);
-
-      // image stuff
-
-      changeCandidate1Url(
-        await window.contract.get_url({
-          name: localStorage.getItem("Candidate1"),
-        })
-      );
-      changeCandidate2Url(
-        await window.contract.get_url({
-          name: localStorage.getItem("Candidate2"),
-        })
-      );
-
-      changePrompt(localStorage.getItem("prompt"));
-
-      // vote checking stuff
-
-      let didUserVote = await window.contract.did_participate({
-        prompt: localStorage.getItem("prompt"),
-        user: window.accountId,
-      });
-
-      changeResultsDisplay(didUserVote);
-      changeButtonStatus(didUserVote);
-    };
-
-    getInfo();
+    // logic needed to retrieve vote count
+    // logic needed to get image url for both candidates and change the candidate#URL state variables
   }, []);
 
   const addVote = async (index) => {
-    changeButtonStatus(true);
-    await window.contract.add_vote({
-      prompt: localStorage.getItem("prompt"),
-      index: index,
-    });
-
-    await window.contract.record_user({
-      prompt: localStorage.getItem("prompt"),
-      user: window.accountId,
-    });
-
-    let voteCount = await window.contract.get_votes({
-      prompt: localStorage.getItem("prompt"),
-    });
-    changeVote1(voteCount[0]);
-    changeVote2(voteCount[1]);
-    changeResultsDisplay(true);
+    // add code to add a vote to the blockchain
+    // add code to record the user's participation in this vote
+    // Get vot count after adding vote
+    // update state variables
   };
 
   return (

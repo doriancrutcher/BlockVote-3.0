@@ -9,10 +9,8 @@ const Home = (props) => {
 
   useEffect(() => {
     const getPrompts = async () => {
-      changePromptList(await window.contract.get_all_prompts({}));
-      console.log(await window.contract.get_all_prompts({}));
+      // Add logic to get prompts from Blockchain
     };
-    getPrompts();
   }, []);
 
   return (
